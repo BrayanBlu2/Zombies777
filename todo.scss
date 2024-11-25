@@ -1,0 +1,362 @@
+//Variables
+$Rojo: red;
+$Azul: blue;
+$Naranja: orange;
+$Blanco: white;
+$Gris: rgba(92, 90, 90, 0.5);
+$Negro: black;
+
+$rapido: 0.6s; //una transición para los itemns
+
+body{  //Especificar atributos del body
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(zombies/FondoZombie.jpg);
+    font-size: 18px;
+    background-size: cover;
+    font-style: italic;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0px;
+    margin: 0px;
+    color:  white;
+    margin-top: 110px;
+    cursor: url("zombies/Blundergat.png"), auto;
+}
+
+h2{ //Tamaño estandar de los h2
+    font-size: 45px;
+}
+
+.header__nav{ //especificar la posición del header 
+    z-index: 99999999;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: $Gris;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100px;
+    margin-top: -110px;
+}
+
+.header__nav img{ //tamaño del logo 
+    width: 165px;
+    height: auto;
+
+}
+
+
+ul{ //tamaño del contenedor donde estan los li
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+
+    li{     //tamaño de cada li
+        list-style: none;
+        width: 10%;
+        height: auto;
+        
+
+        a{  //atributos de cada texto que está dentro de un a
+            font-size: 20px;
+            text-decoration: none;
+            background-color: $Gris;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border-bottom: 1px;
+            width: 100%;
+            padding: 10px;
+            color: $Blanco;
+            border: solid, 1px;
+            border-color: $Negro;
+            height: AUTO;
+            transition: $rapido;
+
+            &:hover{ //pequeña animación de los botones con el puntero
+                border-color: aqua;
+                font-size: 25px;                     
+            }
+        }
+    }
+}
+
+.container2{
+    width: 55%;
+    height: auto;
+}
+
+.container2 img{
+    width: 59%;
+    height: auto;
+    }
+
+section{
+    padding: 0 35px 5px;
+}
+
+h1{   //Atributos del h1 y un fondo con imagen
+    padding-left: 10px;
+    background-image: url(/zombies/HumoRed.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 80px;
+}
+.container2 img{
+background-image: url(Zombie-hand.gif);
+background-size: cover;
+}
+
+.container2 p{
+    background-color: $Gris;
+    backdrop-filter: blur(10px);
+}
+//Codigo de servicios
+@for $i from 1 through 6 { //Bucle para darle un margen a cada uno de los div de servicios
+    .service#{$i} {  
+    margin-left: $i * 60px;
+    width: 39%;
+    background-color: $Gris;
+    backdrop-filter: blur(10px);
+    border-radius: 0 7px 7px 0;
+    }
+    
+    }
+
+
+//Código de gallery
+.gallery__grid{ //Configurar la dirección y posición de la galería de imágenes
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery__item{ //tamaño de cada uno de los itemns de la galería
+    display: grid;
+    width: 30%;
+    height: auto;
+    justify-content: space-around;
+}
+
+
+.gallery__item img{ //sombra guapa a las imágenes
+    filter: drop-shadow(2px 2px 10px $Rojo);
+}
+
+
+img{ //tamaño de cada imagen
+    width: 190px;
+    height: 110px;
+}
+
+.gallery__item p{ //Darle colores a los títulos de las armas
+    background-color: $Gris;
+    backdrop-filter: blur(10px); 
+    height: 20px;
+}
+
+section{ //Dar un margen 
+    margin-block-end: 50px; ;
+}
+
+.gallery__item img:hover{  //Darle una pequeña animación con el puntero a las imágenes
+    width: 250px;
+    height: 125px;
+    filter: drop-shadow(2px 2px 10px $Azul);
+    transition: $rapido;
+}
+
+.container h2{
+background-image: url(/zombies/HumoRed.gif);
+background-size: cover;
+background-position: center;
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+}
+
+//Apartado de contacto
+.container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact__form{ //Especificar el tamaño del formulario y su posición
+    display: grid;
+    justify-content: center;
+    width: 35%;
+    background-color: $Gris;
+    backdrop-filter: blur(10px); 
+    height: auto;
+    border-radius: 8px;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{ //Modificar todos los imput dandele atributos de color, tamaño etc
+    margin-top: 15px;
+    background-color: $Gris;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    margin: 5px 0px 19px 30px;
+    width: 80%;
+    height: 40px;
+    border-color: $Blanco;
+    color: $Blanco;
+}
+
+
+.btn--primary{ //Darle diseño y atributos al botón
+    border: solid 2px;
+    border-radius: 8px;
+    width: 83%;
+    border-color: $Blanco;
+    margin-top: 20px;
+    margin-inline-end:  20px;
+    background-color: gray;
+    color: $Blanco;
+    margin: 5px 0px 19px 30px;
+}
+
+label{ //Modificar todos los labels
+    width: 20%;
+    margin: 15px 0px 0px 8px;
+    font-size: 24px;
+}
+
+textarea{ //Modificar el textarea para adaptar el tamaño
+    width: 80%;
+    height: 80px;
+    background-color: $Gris;
+    backdrop-filter: blur(10px);
+    border-color: $Blanco;
+    margin:5px 0px 19px 30px; ;
+    color: $Blanco;
+}
+
+.container3 h2{ //Modificar únicamente el h2 que está dentro del  div container3
+    background-image: url(/zombies/HumoRed.gif);
+background-size: cover;
+background-position: center;
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+}
+
+.footer{ //Definir el tamaño del footer y en que dirección iran sus itemns
+    color: $Blanco;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $Gris;
+    backdrop-filter: blur(10px);
+    height: 180px;
+}
+
+#listaPerks img{ //Definir el tamaño de las imagenes
+width: auto;
+height: 70px;
+background-size: cover;
+margin: 10px;
+-webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+#listaPerks img:hover{  //Poner una animación a las imagenes de los perks cuando el puntero este encima
+background-color: rgba(92, 90, 90, 0.5);
+height: 80px;
+transition: $rapido;
+}
+
+
+@media only screen and (max-width: 800px) { //Media screen para adaptar los elementos del body según el tamaño de la pantalla
+    .header__nav{    //Para adaptar y header y sus botones
+        z-index: 99999999;   
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $Gris;
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 140px;
+        margin-top: -110px;
+    }
+
+    ul{ //Para adaptar la lista según la columna
+        width: 100%;
+        display: flexbox;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    li{
+        flex-direction: column; //Mover los botones y alinearlos según la columna, también cvambiando sus tamaños
+        align-items: center;
+        margin: 5px;
+        width: 50px;
+        height: 10px;
+        font-size: 12px;
+        padding: 0;
+    }
+
+
+    #listaPerks{ //Para adptar los items a la linea
+        display: flex;
+        flex-direction: row;
+    }
+
+    #listaPerks img{ //cambiar el tamaño de las imagenes para que se vean mejor
+        width: 30px;
+        height: 50px;
+        background-size: cover;
+        }
+
+        .gallery__grid{ //Configurar la dirección y posición de la galería de imágenes
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        h2{ //pequeño pading para que los h2 no sean tapados por el header
+            padding-top: 20px;
+        }
+
+        .contact__form{ //Especificar el tamaño del formulario y su posición
+            display: grid;
+            justify-content: center;
+            width: 50%;
+            background-color: $Gris;
+            backdrop-filter: blur(10px); 
+            height: auto;
+            border-radius: 8px;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        a{
+            padding: 0px;
+            width: 5%;
+            height: 5%;
+        }
+
+
+}
